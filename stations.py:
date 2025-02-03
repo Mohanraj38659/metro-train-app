@@ -1,0 +1,9 @@
+# Logic for stations
+def get_stations():
+    stations = [
+        {"station_name": "Station A", "location": "Location 1", "facilities": ["Parking", "Restrooms"]},
+        {"station_name": "Station B", "location": "Location 2", "facilities": ["Cafeteria", "WiFi"]},
+        {"station_name": "Station C", "location": "Location 3", "facilities": ["Parking", "Restrooms", "WiFi"]},
+        {"station_name": "Station D", "location": "Location 4", "facilities": ["Cafeteria"]},
+    ]
+    return stations
