@@ -1,0 +1,8 @@
+# Logic for train routes
+def get_routes():
+    routes = [
+        {"route_name": "Red Line", "stations": ["Station A", "Station B", "Station C"]},
+        {"route_name": "Blue Line", "stations": ["Station D", "Station E", "Station F"]},
+        {"route_name": "Green Line", "stations": ["Station G", "Station H", "Station I"]},
+    ]
+    return routes
