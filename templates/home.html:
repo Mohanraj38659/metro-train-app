@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Train App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Metro Train App</h1>
+    </header>
+    <section>
+        <h2>Stations</h2>
+        <ul>
+            {% for station in stations %}
+                <li><strong>{{ station.station_name }}</strong> - {{ station.location }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h2>Train Routes</h2>
+        <ul>
+            {% for route in routes %}
+                <li><strong>{{ route.route_name }}</strong>: 
+                    {% for station in route.stations %}
+                        {{ station }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>
